@@ -1,0 +1,111 @@
+:root {
+    --primary-color: #468b87;
+}
+
+.mdc-top-app-bar{
+    position: fixed;
+    top: 0;
+    background-color: var(--primary-color) !important;
+}
+.mdc-tab .mdc-tab__ripple::before, .mdc-tab .mdc-tab__ripple::after, .mdc-bottom-navigation, header, footer {
+    background-color: var(--primary-color) !important;
+}
+.mdc-tab--active .mdc-tab__text-label {
+    color: var(--primary-color) !important;
+}
+.mdc-tab-indicator--active .mdc-tab-indicator__content--underline {
+    border-color: var(--primary-color) !important;
+}
+
+x.mdc-top-app-bar{
+    position: fixed;
+    top: 0;
+}
+.mdc-image-list--masonry{
+    column-count: 2;
+}
+.mdc-list .mdc-list-logo{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: 20px;
+    align-items: stretch;
+    text-decoration: none;
+    color: #111;
+}
+:not(.mdc-list-item--disabled).mdc-list-item .mdc-list-item__ripple::before, :not(.mdc-list-item--disabled).mdc-list-item .mdc-list-item__ripple::after{
+    left: 10px !important;
+    border-radius: 0 !important;
+}
+.mdc-list-logo-img{
+    padding-bottom: 10px;
+}
+.mdc-list .mdc-list-logo h2, .mdc-list .mdc-list-logo p{
+    margin: 0;
+}
+.mdc-list-item {
+    padding: 15px 10px 15px 25px;
+    gap: 8px;
+    letter-spacing: 0px;
+    font-size: 18px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.mdc-bottom-navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #468b87;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+    height: 56px;
+    z-index: 3;
+}
+
+.mdc-bottom-navigation__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.mdc-bottom-navigation__icon {
+    font-size: 24px;
+}
+.hidden {
+    display: none;
+}
+header, footer {
+    max-width: 100vw;
+    background-color: #468b87
+}
+.mdc-tab .mdc-tab__icon {
+    color: #fff;
+}
+.sheet {
+    position:absolute;
+    top: 0;
+    width: 100%;
+    margin-left: 0;
+    background-color:
+    black;
+    transition: margin-left 0.3s ease;
+}
+.sheet-out-of-view {
+    margin-left: -100%;
+}
+.sheet main {
+    min-height: calc(100vh - 56px - 48px);
+}
+.sheet main img {
+    width: 100%; 
+    height: auto;
+}

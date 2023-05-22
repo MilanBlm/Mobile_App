@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <!-- Vereiste meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+
+    <!-- Material.io bestanden (CSS & Font/icons)-->
+    <!-- Uitleg werking componenents: https://material.io/components?platform=web -->
+    <!-- Demo van components:         https://material-components.github.io/material-components-web-catalog/#/ -->
+    <!-- Demo en uitleg icons:        https://fonts.google.com/icons?selected=Material+Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/logo_G.png"/> 
+    <link rel="manifest" href="manifest.json">
+    <meta name="description" content="Een simpele PWA met memes"> 
+    <meta name="theme-color" content="#468b87" />
+    <meta     name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="GCMemes PWA"> 
+    <link rel="apple-touch-icon" href="img/logo_G.png">
+
+    <style>body{margin: 0;}</style>
+    
+    <!-- Material.io bestanden (JS en registratie componenten) -->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script>const MDCBanner = mdc.banner.MDCBanner;const MDCCheckbox = mdc.checkbox.MDCCheckbox;const MDCChip = mdc.chips.MDCChip;const MDCChipSet = mdc.chips.MDCChipSet;const MDCCircularProgress = mdc.circularProgress.MDCCircularProgress;const MDCDataTable = mdc.dataTable.MDCDataTable;const MDCDialog = mdc.dialog.MDCDialog;const MDCDrawer = mdc.drawer.MDCDrawer;const MDCFloatingLabel = mdc.floatingLabel.MDCFloatingLabel;const MDCFormField = mdc.formField.MDCFormField;const MDCIconButtonToggle = mdc.iconButton.MDCIconButtonToggle;const MDCLineRipple = mdc.lineRipple.MDCLineRipple;const MDCLinearProgress = mdc.linearProgress.MDCLinearProgress;const MDCList = mdc.list.MDCList;const MDCMenu = mdc.menu.MDCMenu;const MDCMenuSurface = mdc.menuSurface.MDCMenuSurface;const MDCNotchedOutline = mdc.notchedOutline.MDCNotchedOutline;const MDCRadio = mdc.radio.MDCRadio;const MDCRipple = mdc.ripple.MDCRipple;const MDCSegmentedButton = mdc.segmentedButton.MDCSegmentedButton;const MDCSelect = mdc.select.MDCSelect;const MDCSlider = mdc.slider.MDCSlider;const MDCSnackbar = mdc.snackbar.MDCSnackbar;const MDCSwitch = mdc.switchControl.MDCSwitch;const MDCTabBar = mdc.tabBar.MDCTabBar;const MDCTextField = mdc.textField.MDCTextField;const MDCTooltip = mdc.tooltip.MDCTooltip;const MDCTopAppBar = mdc.topAppBar.MDCTopAppBar;</script>
+
+</head>
+
+<body>
+<!-- HTML web-elementen -->  
+<header class="mdc-top-app-bar" style="background-color: #468b87;">
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Open navigation menu">menu</button>
+            <span class="mdc-top-app-bar__title">Home</span>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Search">search</button>
+            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Options">more_vert</button>
+        </section>
+    </div>
+</header> 
+
+<aside class="mdc-drawer mdc-drawer--modal">
+    <div class="mdc-drawer__content">
+        <nav class="mdc-list">
+            <a class="mdc-list-logo" href="#">
+                <span class="mdc-list-item__ripple"></span>
+                <img class="mdc-list-logo-img" src="img/logo_G.png" aria-hidden="true" width="25%">
+                <h2>GRAAFSCHAP<br>COLLEGE</h2>
+                <p>altijd een meme</p>
+            </a>
+            <a class="mdc-list-item mdc-list-item--activated" href="./index.html" aria-current="page" tabindex="0">
+                <span class="mdc-list-item__ripple"></span>
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
+                <span class="mdc-list-item__text">Home</span>
+            </a>
+            <a class="mdc-list-item" href="#">
+                <span class="mdc-list-item__ripple"></span>
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">chat</i>
+                <span class="mdc-list-item__text">Chat</span>
+            </a>
+            <a class="mdc-list-item" href="#">
+                <span class="mdc-list-item__ripple"></span>
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i>
+                <span class="mdc-list-item__text">Account</span>
+            </a>
+        </nav>
+    </div>
+</aside>
+
+<div class="mdc-drawer-scrim"></div>
+<main id="main-content" class="main-content">
+    <div class="main-section mdc-top-app-bar--fixed-adjust">
+        <div class="mdc-tab-bar" role="tablist">
+            <div class="mdc-tab-scroller">
+                <div class="mdc-tab-scroller__scroll-area">
+                <div class="mdc-tab-scroller__scroll-content">
+                    <button id="meme-tab" class="mdc-tab" role="tab" aria-selected="true" tabindex="0">
+                        <span class="mdc-tab__content">
+                            <span class="mdc-tab__text-label">MEMES</span>
+                        </span>
+                        <span class="mdc-tab-indicator">
+                            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                        </span>
+                        <span class="mdc-tab__ripple"></span>
+                    </button>
+                    <button id="fail-tab" class="mdc-tab" role="tab" aria-selected="true" tabindex="0">
+                        <span class="mdc-tab__content">
+                            <span class="mdc-tab__text-label">FAILS</span>
+                        </span>
+                        <span class="mdc-tab-indicator">
+                            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                        </span>
+                        <span class="mdc-tab__ripple"></span>
+                    </button>
+                    <button id="tweet-tab" class="mdc-tab" role="tab" aria-selected="true" tabindex="0">
+                        <span class="mdc-tab__content">
+                            <span class="mdc-tab__text-label">TWEETS</span>
+                        </span>
+                        <span class="mdc-tab-indicator">
+                            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                        </span>
+                        <span class="mdc-tab__ripple"></span>
+                    </button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <ul class="mdc-image-list mdc-image-list--masonry my-masonry-image-list">
+            <li class="mdc-image-list__item" data-category="meme" onclick="openMeme('img/late.jpg')">
+                <img class="mdc-image-list__image" src="img/late.jpg">
+                <div class="mdc-image-list__supporting">
+                </div>
+            </li>
+            <li class="mdc-image-list__item" data-category="tweet" onclick="openMeme('img/24-animal-tweets-thatll-make-you-chuckle-a-little-2-629-1568391654-0_dblbig.jpg')">
+                <img class="mdc-image-list__image" src="img/24-animal-tweets-thatll-make-you-chuckle-a-little-2-629-1568391654-0_dblbig.jpg">
+                <div class="mdc-image-list__supporting">
+                </div>
+            </li>
+            <li class="mdc-image-list__item" data-category="fail" onclick="openMeme('img/fail-soccer.gif')">
+                <img class="mdc-image-list__image" src="img/fail-soccer.gif">
+                <div class="mdc-image-list__supporting">
+                </div>
+            </li>
+            <li class="mdc-image-list__item" data-category="meme" onclick="openMeme('img/teacher.gif')">
+                <img class="mdc-image-list__image" src="img/teacher.gif">
+                <div class="mdc-image-list__supporting">
+                </div>
+            </li>
+            <li class="mdc-image-list__item" data-category="meme" onclick="openMeme('img/football-crazygoal.gif')">
+                <img class="mdc-image-list__image" src="img/football-crazygoal.gif">
+                <div class="mdc-image-list__supporting">
+                </div>
+            </li>
+            <li class="mdc-image-list__item" data-category="meme" onclick="openMeme('img/footballgif.gif')">
+                <img class="mdc-image-list__image" src="img/footballgif.gif">
+                <div class="mdc-image-list__supporting">
+                </div>
+            </li>
+            <li class="mdc-image-list__item" data-category="tweet" onclick="openMeme('img/thief.jpeg')">
+                <img class="mdc-image-list__image" src="img/thief.jpeg">
+                <div class="mdc-image-list__supporting">
+                </div>
+            </li>
+            <li class="mdc-image-list__item" data-category="fail" onclick="openMeme('img/fail-water.gif')">
+                <img class="mdc-image-list__image" src="img/fail-Water.gif">
+                <div class="mdc-image-list__supporting">
+                </div>
+            </li>
+        </ul>
+    </div>
+</main>
+
+<footer>
+    <nav class="mdc-bottom-navigation">
+        <a class="mdc-bottom-navigation__link" href="#">
+            <i class="material-icons mdc-bottom-navigation__icon">group</i>
+        </a>
+        <a class="mdc-bottom-navigation__link" href="#">
+            <i class="material-icons mdc-bottom-navigation__icon">person</i>
+        </a>
+    </nav>
+</footer>
+
+<section class="sheet hidden sheet-out-of-view sheet-meme" id="sheet-meme">
+    <header class="mdc-top-app-bar mdc-top-app-bar--fixed mdc-top-app-bar-meme" style="background-color:#468b87;">
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Close sheet navigation menu" onclick="closeSheets();">close</button>
+          <span class="mdc-top-app-bar__title" id="title"  >Meme titel</span>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+          <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Search">share</button>
+          <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Options">more_vert</button>
+        </section>
+      </div>
+    </header>
+
+    <main class="mdc-top-app-bar--fixed-adjust main-content" id="main-meme">
+      <img id="meme-image" alt="meme" src="img/logo_G.png">
+    </main>
+      
+    <footer>
+      <div class="mdc-tab-bar mdc-tab-bar-meme" role="tablist">
+        <div class="mdc-tab-scroller">
+          <div class="mdc-tab-scroller__scroll-area">
+            <div class="mdc-tab-scroller__scroll-content">
+              <button class="mdc-tab mdc-tab" role="tab" aria-selected="false" tabindex="0">
+                <span class="mdc-tab__content">
+                  <span class="mdc-tab__icon material-icons" aria-hidden="true">thumb_up</span>
+                </span>
+                <span class="mdc-tab-indicator">
+                  <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                </span>
+                <span class="mdc-tab__ripple"></span>
+              </button>
+              <button class="mdc-tab mdc-tab" role="tab" aria-selected="false" tabindex="0">
+                <span class="mdc-tab__content">
+                  <span class="mdc-tab__icon material-icons" aria-hidden="true">favorite</span>
+                </span>
+                <span class="mdc-tab-indicator">
+                  <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                </span>
+                <span class="mdc-tab__ripple"></span>
+              </button>
+              <button class="mdc-tab mdc-tab" role="tab" aria-selected="false" tabindex="0">
+                <span class="mdc-tab__content">
+                  <span class="mdc-tab__icon material-icons" aria-hidden="true">thumb_down</span>
+                </span>
+                <span class="mdc-tab-indicator">
+                  <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                </span>
+                <span class="mdc-tab__ripple"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+</section>
+<!-- Vanaf hier custom Javascript-->
+    <script src="script.js"></script>
+</body>
+
+</html>
