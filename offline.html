@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Offline</title>
+    <link rel="shortcut icon" href="img/logo_G.png" type="image/x-icon">
+    <!-- Vereiste tags voor PWA-->
+    <link rel="icon" type="image/png" href="img/logo_G.png"/> 
+    <link rel="icon" type="image/png" sizes="512x512" href="img/logo_G_512.png"/> 
+    <link rel="manifest" href="manifest.json">
+    <meta name="description" content="Een simpele PWA met memes"> 
+    <meta name="theme-color" content="#c22537" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="GCMemes PWA"> 
+    <link rel="apple-touch-icon" href="img/logo_G.png">
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .offline {
+            color: red;
+            margin-left: -20px;
+            font-size: 30px;
+        }
+        .firstLine {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            font-size: 30px;
+        }
+        .streep {
+            position: relative;
+        }
+        .streep::before {
+            content: "";
+            position: absolute;
+            height: 2px;
+            background-color: red;
+            width: 100%;
+            top: 57%;
+            transform: rotate(170deg);
+        }
+        p {
+            margin: 0;
+        }
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <img src="img/logo_G.png" alt="">
+        <h1>GRAAFSCHAP COLLEGE</h1>
+        <div>
+            <div class="firstLine"><p class="streep">altijd een </p><span>meme</span></div>
+            <p class="offline">offline geen</p>
+        </div>
+        
+    </div>
+</body>
+</html>
